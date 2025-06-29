@@ -1,0 +1,600 @@
+* {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Base styling for the page */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background-color: lightslategray;
+  border-radius: 50%;
+  pointer-events: none;
+  /* Prevents interfering with clicks */
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
+}
+
+/* Interaction states (optional) */
+body:hover .custom-cursor {
+  width: 10px;
+  height: 10px;
+}
+
+.navbar {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: hsla(0, 0%, 100%, .12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+  border: 1px solid hsla(0, 0%, 100%, .62);
+  border-radius: 50px;
+  /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  /* Drop shadow */
+  z-index: 1000;
+  flex-wrap: wrap;
+  /* Keep above other elements */
+}
+
+/* Logo Styling */
+.logo {
+  background: transparent;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(16deg, cyan, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* List Items */
+.listitemn {
+  align-items: center;
+  text-align: center;
+  background: transparent;
+}
+
+.listitemn ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+  background: transparent;
+  margin: 0;
+}
+
+.listitemn ul li {
+  background: transparent;
+}
+
+.listitemn ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  background: transparent;
+  background: linear-gradient(16deg, cyan, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Button */
+.navbutton button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbutton a {
+  background: transparent;
+  text-decoration: none;
+  color: #fff;
+}
+
+.hamburger,
+#phone {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+  .logo a{
+    font-size: 1.35rem;
+  }
+  .hamburger {
+    display: block;
+    font-size: 20px;
+    background: none;
+    border: none;
+    flex-wrap: wrap;
+    cursor: pointer;
+    background: linear-gradient(16deg, cyan, lightgreen);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1001;
+    /* Above other elements */
+  }
+
+  #phone {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    /* Semi-transparent black */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #phone.open {
+    display: flex;
+    flex-wrap: wrap;
+    /* Make the phone div visible */
+  }
+
+  .listitemnphone ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .listitemnphone ul li {
+    margin: 20px 0;
+  }
+
+  .listitemnphone ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    background: linear-gradient(16deg, cyan, lightgreen);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  .listitemnphone ul li a:hover {
+    color: cyan;
+  }
+
+  .navbuttonphone button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 1px solid #fff;
+
+  }
+
+  .navbuttonphone a {
+    background: linear-gradient(16deg, cyan, lightgreen);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+
+
+  .ri-close-large-line {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .listitemn {
+    display: none;
+  }
+
+
+  /* Button */
+  .navbutton button {
+    display: none;
+  }
+}
+
+.hero1 {
+  color: white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero1 h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(16deg, cyan, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.reveal1{
+  font-size: 20px;
+}
+.role-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: lightgray;
+  text-decoration: underline;
+}
+
+.img-fluid {
+  max-width: 80%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hero1 h1 {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+
+  .role-text {
+    font-size: 1rem;
+  }
+  .reveal1{
+  font-size: 16px;
+}
+
+  .img-fluid {
+    max-width: 100%;
+  }
+
+  .reveal1 {
+    padding: 20px;
+  }
+}
+
+.hero4 {
+  width: 100%;
+  height: 55vh;
+}
+
+.hero4cont {
+  display: flex;
+  height: 78%;
+  width: 100%;
+  padding: 10px;
+}
+
+.hero4box {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.serial4 h2 {
+  padding: 20px;
+  background: linear-gradient(16deg, cyan, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title4 {
+  border-bottom: 1px solid #fff;
+  height: 60%;
+}
+
+.title4 h6 {
+  color: #fff;
+  padding: 20px;
+}
+
+.title4 a {
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.detail4 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .hero4 {
+    height: auto;
+    /* Adjust height to fit content */
+    padding: 10px;
+  }
+
+  .hero4cont {
+    flex-direction: column;
+    /* Stack boxes vertically */
+    align-items: center;
+  }
+
+  .hero4box {
+    width: 100%;
+    /* Full width on smaller screens */
+    margin: 10px 0;
+    /* Add spacing between boxes */
+  }
+
+  .serial4 h2 {
+    font-size: 1.2rem;
+    /* Smaller font for headings */
+    padding: 8px;
+  }
+
+  .title4 h6 {
+    font-size: 0.9rem;
+    /* Smaller font for subtitles */
+    padding: 8px;
+  }
+
+  .title4 a {
+    font-size: 0.8rem;
+    /* Smaller font for links */
+    padding: 8px;
+  }
+}
+
+/* section cert */
+.cer {
+  width: 100%;
+  height: 78vh;
+}
+
+/* Container Styling */
+.certificate {
+  display: flex;
+  width: 100%;
+}
+
+/* Row Styling */
+.certificate1 {
+  height: 100%;
+  width: 100%;
+  margin: 0 10px;
+  display: flex;
+}
+
+/* Card Styling */
+.certificate-card {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin: 0 10px;
+}
+
+/* Image Styling */
+.certificate-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Text Styling */
+.certificate-title {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+.certificate-subtitle {
+  font-size: 1rem;
+  background: linear-gradient(16deg, cyan, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cer {
+    height: auto;
+
+  }
+
+  /* Certificate Container */
+  .certificate {
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align items */
+  }
+
+  /* Row Styling */
+  .certificate1 {
+    flex-direction: column;
+    /* Stack cards vertically */
+
+  }
+
+  /* Card Styling */
+  .certificate-card {
+    width: 100%;
+    padding: 10px;
+    /* Make cards narrower for better fit */
+    margin: 15px 0;
+    /* Add spacing between cards */
+
+  }
+
+  /* Image Styling */
+  .certificate-img {
+    width: 100%;
+    /* Make images responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-bottom: 1rem;
+  }
+
+  /* Text Styling */
+  .certificate-title {
+    font-size: 1rem;
+    /* Adjust text size */
+  }
+
+  .certificate-subtitle {
+    font-size: 0.9rem;
+    /* Adjust subtitle size */
+  }
+}
+
+
+/* Section for Divider */
+.footer-section {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #444;
+}
+
+/* Content Section */
+.footer-content .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Columns */
+.footer .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer .col {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer .title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Links */
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 5px 0;
+  background: linear-gradient(16deg, cyan, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  background: linear-gradient(16deg, cyan, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: cyan;
+}
+
+/* Divider Line */
+.footer hr {
+  border: 0;
+  border-top: 1px solid #444;
+  margin: 20px 0;
+}
+
+/* Bottom Text */
+.footer p {
+  font-size: 0.9rem;
+  background: linear-gradient(16deg, cyan, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer p a {
+  background: linear-gradient(16deg, cyan, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.footer p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .col {
+    margin: 20px 0;
+  }
+}
