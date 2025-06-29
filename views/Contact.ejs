@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Miss+Fajardose&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/style1.css">
+  <title>Potfolio</title>
+</head>
+
+<body>
+  <div class="custom-cursor"></div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/" class="text-decoration-none" id="sign">AryanBagayatkar</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn">
+        &#9776;
+      </button>
+      <div class="listitemn" id="nav-list">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/work">Works</a></li>
+        </ul>
+      </div>
+      <div class="navbutton">
+        <button><a href="/contact">Get in Touch</a></button>
+      </div>
+    </nav>
+    <div id="phone">
+      <div class="listitemnphone" id="list">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/work">Works</a></li>
+        </ul>
+      </div>
+      <div class="navbuttonphone">
+        <button><a href="/contact">Get in Touch</a></button>
+      </div>
+      <i class="ri-close-large-line"></i>
+    </div>
+  </header>
+  <section class="contactpage">
+    <div class="contactbox">
+      <h1>Connect With Me</h1>
+      <p>Subscribe to letterhead</p>
+      <div class="emalcont">
+        <input type="email" name="" id="" placeholder="Enter your email">
+      </div>
+      <input type="submit" value="Subscribe">
+    </div>
+  </section>
+  <footer class="footer">
+    <section class="footer-section border-bottom">
+      <!-- Additional content like icons or notices can go here -->
+    </section>
+    <section class="footer-content">
+      <div class="container">
+        <div class="row">
+          <div class="col sitemap">
+            <h6 class="title">Sitemap</h6>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/work">Work</a></li>
+            </ul>
+          </div>
+
+          <div class="col social-media">
+            <h6 class="title">Social Media</h6>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/aryan-bagayatkar-86aa782a3/">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/aryan.bagayatkar/">Instagram</a></li>
+              <li><a href="https://github.com/AryanBagayatkar">GitHub</a></li>
+            </ul>
+          </div>
+
+          <div class="col contact">
+            <h6 class="title">Contact</h6>
+            <ul>
+              <li>Mumbai, India</li>
+              <li><a href="mailto:aryan990leo@gmail.com">aryan990leo@gmail.com</a></li>
+              <li>+91 829 173 5756</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center">
+          © 2025 Copyright:
+          <a href="https://aryan-potfolio.netlify.app/">Aryan Portfolio</a>
+        </p>
+      </div>
+      <p>Version 3</p>
+    </section>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cursor = document.querySelector(".custom-cursor");
+      document.addEventListener("mousemove", (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+
+        cursor.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    });
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const phoneDiv = document.getElementById("phone");
+    const closeIcon = document.querySelector(".ri-close-large-line");
+
+    // Toggle the visibility of the phone div
+    hamburgerBtn.addEventListener("click", () => {
+      phoneDiv.classList.toggle("open");
+      document.body.style.overflow = phoneDiv.classList.contains("open") ? "hidden" : "auto";
+    });
+
+    // Close the phone div when the close icon is clicked
+    closeIcon.addEventListener("click", () => {
+      phoneDiv.classList.remove("open");
+      document.body.style.overflow = "auto";
+    });
+  </script>
+
+  <script src="/javascript/animate.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</body>
+
+</html>
